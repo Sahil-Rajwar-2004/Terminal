@@ -1,4 +1,4 @@
-# Terminal
+# Terminal (v-2023.6.10.1)
 
-for both Windows and Linux with additional features
+For both Windows and Linux OS with additional features
 
