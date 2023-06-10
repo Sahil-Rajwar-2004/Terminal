@@ -5,6 +5,8 @@ from about import author,version,homepage
 import sys
 import os
 
+print(f"v: ({version})")
+
 current_date = datetime.date.today()
 current_day = current_date.strftime("%A")
 print(f"{current_date} {current_day}")
@@ -16,6 +18,14 @@ while running:
     cmd = input(f"[{cwd}]: ")
     if cmd.startswith("exit"):
         running = False
+
+    if cmd.startswith("clear"):
+        os.system("cls")
+        continue
+
+    if cmd.startswith("cls"):
+        os.system("cls")
+        continue
 
     if cmd.startswith("about"):
         about = f"""author {author}
