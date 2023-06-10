@@ -1,6 +1,7 @@
 import subprocess
 import datetime
 import webbrowser
+from about import author,version,homepage
 import sys
 import os
 
@@ -17,15 +18,23 @@ while running:
         running = False
 
     if cmd.startswith("about"):
-        about = r"""creator: Sahil Rajwar
-version: 2023.6.10
-homepage: https://github.com/Sahil-Rajwar-2004/Terminal/
+        about = f"""author {author}
+version: {version}
+homepage: {homepage}
 """
         print(about)
         continue
 
+    if cmd.startswith("version"):
+        print(version)
+        continue
+
     if cmd.startswith("homepage"):
-        webbrowser.open("https://github.com/Sahil-Rajwar-2004/Terminal/")
+        webbrowser.open(homepage)
+        continue
+
+    if cmd.startswith("author"):
+        print(author)
         continue
 
     if cmd.startswith("search "):
