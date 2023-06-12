@@ -46,6 +46,10 @@ homepage: {homepage}
     if cmd.startswith("author"):
         print(author)
         continue
+    
+    if cmd.startswith("wsl"):
+        os.startfile("C:\\Windows\\System32\\wsl.exe")
+        continue
 
     if cmd.startswith("search "):
         name = cmd[7:].strip()
